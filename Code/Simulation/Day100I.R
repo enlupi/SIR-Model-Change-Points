@@ -127,6 +127,7 @@ papapa<-function(jishu)
         Delta_hat_candidate<-Delta_hat
         Delta_hat_candidate[change_position+0:1]<-Delta_hat_candidate[change_position+1:0]
         Stage_hat_candidate<-cumsum(Delta_hat_candidate)
+        
         index_change_candidate<-which(Delta_hat_candidate==1)
         change_position_all_candidate<-which(abs(Delta_hat_candidate[2:(T_max-1)]-Delta_hat_candidate[1+2:(T_max-1)])==1)+1
         
@@ -154,7 +155,8 @@ papapa<-function(jishu)
           Stage_hat<-Stage_hat_candidate
           index_change<-which(Delta_hat==1)
         }
-      }else
+      }
+      else
       {
         if(change_type==1)
         {
@@ -264,12 +266,13 @@ papapa<-function(jishu)
       }
       print(iter)
     }
+    
+    
+    
     Beta_all<-NULL
     B_all<-NULL
-    
     Gamma_all<-NULL
     R_all<-NULL
-    
     Delta_all<-NULL
     
     for(iter in 1:AAA)
@@ -381,6 +384,7 @@ papapa<-function(jishu)
             
             phase_original<-c(Stage_hat[change_position],Stage_hat_candidate[change_position])
             phase_candidate<-c(Stage_hat_candidate[change_position])
+            
             
             logp_original<-0
             logp_candidate<-0
