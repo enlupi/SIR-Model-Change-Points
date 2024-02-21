@@ -120,7 +120,7 @@ def plot_bg(beta_true, beta_est, beta_mean, beta_mode, beta_median,
     fig.legend((l1,l2,l3,l4), ('Beta', 'Gamma', 'Estimator', 'True Value'), loc='outside right upper')
     
     
-def plot_distrib(chain, var, est, mean, mode, median, bins, times):
+def plot_distrib(chain, var, est, mean, mode, median, true, bins, times):
 
     arr = np.array(chain[var])
 
@@ -147,10 +147,12 @@ def plot_distrib(chain, var, est, mean, mode, median, bins, times):
             ax[i,j].vlines(x=mean[t],   ymin=0, ymax=height, color='red', linestyle='dashed')
             ax[i,j].vlines(x=mode[t],   ymin=0, ymax=height, color='blue', linestyle='dashed')
             ax[i,j].vlines(x=median[t], ymin=0, ymax=height, color='green', linestyle='dashed')
+            ax[i,j].vlines(x=true[t],   ymin=0, ymax=height, color='black', linestyle='dashed')
 
     l1, = plt.plot([0], [0], color='darkorange', linestyle='dashed')
     l2, = plt.plot([0], [0], color='red', linestyle='dashed')
     l3, = plt.plot([0], [0], color='blue', linestyle='dashed')
     l4, = plt.plot([0], [0], color='green', linestyle='dashed')
+    l5, = plt.plot([0], [0], color='black', linestyle='dashed')
 
-    fig.legend((l1,l2,l3,l4), ('Smooth Estimator', 'Mean', 'Mode', 'Median'), loc='outside right upper')
+    fig.legend((l1,l2,l3,l4,l5), ('Smooth Estimator', 'Mean', 'Mode', 'Median', 'True'), loc='outside right upper')
