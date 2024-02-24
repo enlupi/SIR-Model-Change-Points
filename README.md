@@ -13,8 +13,8 @@ In this work we reproduce the analysis conducted by J. Gu and G. Yin in their pa
 
 ## Repository Structure
 
-The aforementioned files are available in the **References** folder, while the analyzed INFN dataset is contained in **datasets** as Excel files.
+**Data** folder contains the simulated Markov chains for different scenarios and priors for &delta;.
 
-As the name suggests, the **SingleRun** folder contains the results of the analysis conducted on a single run of data taking, i.e. with only one setting for the cavity frequency. Inside, **prepData.ipynb** explains the procedure to take and prepare the data from the raw Excel files for the following analysis,  **fitFunc.ipynb** illustrates the functions for the background and signal fit while **Statistics.ipynb** describes the actual statistical procedure; lastly, **SingleRunAnalysis.ipynb** shows the obtained results.
+**Presentation** folder contains the Jupyter notebook with example code and discussion of methodologies and results obtained.
 
-The **MultipleRunAnalysis** folder cobtains the same elements and analysis as **SingleRun**, but adapts them to work simultaneously on the whole dataset with different cavity frequency settings.
+**Scripts** folder contains the Python functions used in the project.
