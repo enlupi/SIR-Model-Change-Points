@@ -9,7 +9,7 @@ Final project for *Information Theory* course, Physics of Data degree at Univers
 
 ## Abstract
 
-In this work we reproduce the analysis conducted by J. Gu and G. Yin in their paper [Bayesian SIR model with change points with application to the Omicron wave in Singapore](https://www.nature.com/articles/s41598-022-25473-y#:~:text=To%20analyze%20the%20impact%20of,vary%20significantly%20at%20change%20points.). 
+In this work we reproduce the analysis conducted by J. Gu and G. Yin in their paper [Bayesian SIR model with change points with application to the Omicron wave in Singapore](https://www.nature.com/articles/s41598-022-25473-y). To analyze the impact of society or policy changes on the development of the Omicron wave, the stochastic susceptible-infected-removed (SIR) model with change points is proposed to accommodate the situations where the transmission rate and the removal rate may vary significantly at change points. Bayesian inference based on a Markov chain Monte Carlo algorithm is developed to estimate both the locations of change points as well as the transmission rate and removal rate within each stage, and experiments on simulated dataare carried out to test the effectiveness of the proposed method.
 
 ## Repository Structure
 
